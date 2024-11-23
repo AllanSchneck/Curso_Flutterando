@@ -16,35 +16,35 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.amber,
+        title: Text(
+          'Home',
+          style: TextStyle(color: Colors.black, fontSize: 32),
+        ),
         actions: [CustomSwitch()],
       ),
-      body: Column(children: [
-        Center(
-          child: Text(
-            'Allan $counter',
-            style: TextStyle(color: Colors.green, fontSize: 21),
-          ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Ola Mundo',
+                style: TextStyle(color: Colors.amberAccent, fontSize: 21)),
+            CustomSwitch(),
+            Text("contador: $counter")
+          ],
         ),
-        CustomSwitch(),
-      ]),
+      ),
+      backgroundColor: Colors.white54,
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-            logic(counter);
             setState(() {
               counter++;
             });
           }),
     );
-  }
-}
-
-void logic(int contador) {
-  if (contador % 12 == 11) {
-    //quando restar 11 alteção do tema será aplicada através de um botão
-    AppControler.instance.ChangeTheme();
   }
 }
 
