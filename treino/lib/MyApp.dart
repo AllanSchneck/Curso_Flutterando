@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:treino/App_Controler.dart';
 
-
 import 'Home_Page.dart';
 
 class MyApp extends StatelessWidget{
