@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:treino/App_Controler.dart';
 
@@ -27,8 +28,9 @@ class HomePageState extends State<HomePage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
+ //         mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Ola Mundo',
                 style: TextStyle(color: Colors.amberAccent, fontSize: 21)),
@@ -52,6 +54,14 @@ class HomePageState extends State<HomePage> {
                 Container(width: 30, height: 30, color: Colors.black),
               ],
             ),
+            Container(height: 50,),
+            CustomSwitch(),
+            Container(height: 50,),
+            CustomSwitch(),
+            Container(height: 50,),
+            CustomSwitch(),
+            Container(height: 50,),
+            CustomSwitch(),
           ],
         ),
       ),
